@@ -17,15 +17,21 @@
 //  validateEmail();
 //  validatePassword();
 // });
+const countyField=document.getElementById('county');
+const countryField=document.getElementById('country');
+
+if(countryField=="polska"){
+
+}
 
 const emailField = document.getElementById('emaill');
 emailField.addEventListener('input', () => {
  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  if (!emailRegex.test(emailField.value)) {
-    emailField.setCustomValidity("Proszę podać poprawny adres e-mail.");
+   emailField.setCustomValidity("Proszę podać poprawny adres e-mail.");
  }
  else{
-    emailField.setCustomValidity("");
+   emailField.setCustomValidity("");
  }
 });
 
@@ -33,10 +39,10 @@ const nameField = document.getElementById('name');
 nameField.addEventListener('input', () => {
  const nameRegex = /^[A-Z][a-zA-Z\- ]{1,}$/;
  if (!nameRegex.test(nameField.value)) {
-    nameField.setCustomValidity("Proszę podać poprawne imię.");
+   nameField.setCustomValidity("Proszę podać poprawne imię.");
  }
  else{
-    nameField.setCustomValidity("");
+   nameField.setCustomValidity("");
  }
 });
 
@@ -44,10 +50,10 @@ const surnameField = document.getElementById('surname');
 surnameField.addEventListener('input', () => {
  const surnameRegex = /^[A-Z][a-zA-Z\- ]{1,}$/;
  if (!surnameRegex.test(surnameField.value)) {
-    surnameField.setCustomValidity("Proszę podać poprawne nazwisko.");
+   surnameField.setCustomValidity("Proszę podać poprawne nazwisko.");
  }
  else{
-    surnameField.setCustomValidity("");
+   surnameField.setCustomValidity("");
  }
 });
 
@@ -55,17 +61,18 @@ const phoneField = document.getElementById('phone');
 phoneField.addEventListener('input', () => {
  const phoneRegex =  /^[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{9,9}$/;
  if (!phoneRegex.test(phoneField.value)) {
-    phoneField.setCustomValidity("Proszę podać poprawny numer telefonu.");
+   phoneField.setCustomValidity("Proszę podać poprawny numer telefonu.");
  }
  else{
-    phoneField.setCustomValidity("");
+   phoneField.setCustomValidity("");
  }
 });
 
+
 function matchPassword(){
-    haslo1=document.getElementById("password").value;
-    haslo2=document.getElementById("password2").value;
-    if (haslo1==haslo2){
+   haslo1=document.getElementById("password").value;
+   haslo2=document.getElementById("password2").value;
+   if (haslo1==haslo2){
         
-    }
+   }
 }
