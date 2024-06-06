@@ -5,7 +5,7 @@ function toggle(){
 
 var myint=setInterval(toggle,10000);
 console.log(myint);
-
+//////////////////////////////////
 <form onsubmit="return validateForm()">
 <input type="email" name="email" id="email">
 <input type="password" name="password" id="password">
@@ -23,5 +23,17 @@ if (password.length < 6) {
 alert('Hasło musi mieć co najmniej 6 znaków.');
 return false; }
 return true;
+}
+</script>
+/////////////////////////////////////
+<input type="text" name="username" id="username" required
+minlength="3">
+<button onclick="validateForm()">Submit</button>
+<script>
+function validateForm() {
+var usernameInput = document.getElementById('username');
+if (!usernameInput.checkValidity()) {
+alert(usernameInput.validationMessage);
+}
 }
 </script>
