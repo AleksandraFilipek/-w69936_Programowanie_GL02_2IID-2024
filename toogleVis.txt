@@ -1,7 +1,0 @@
-function toggle(){
-	var st=document.querySelectorAll('button')[0].style;
-	st.visibility=(st.visibility==='hidden')?'visible':'hidden';
-}
-
-var myint=setInterval(toggle,10000);
-console.log(myint);

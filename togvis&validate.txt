@@ -1,0 +1,27 @@
+function toggle(){
+	var st=document.querySelectorAll('button')[0].style;
+	st.visibility=(st.visibility==='hidden')?'visible':'hidden';
+}
+
+var myint=setInterval(toggle,10000);
+console.log(myint);
+
+<form onsubmit="return validateForm()">
+<input type="email" name="email" id="email">
+<input type="password" name="password" id="password">
+<button type="submit">Submit</button>
+</form>
+<script>
+function validateForm() {
+var email = document.getElementById('email').value;
+var password = document.getElementById('password').value;
+if (!email.includes('@')) {
+alert('Proszę wprowadzić poprawny adres email.');
+return false;
+}
+if (password.length < 6) {
+alert('Hasło musi mieć co najmniej 6 znaków.');
+return false; }
+return true;
+}
+</script>
